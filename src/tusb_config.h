@@ -109,7 +109,11 @@
 #define CFG_TUH_MEM_ALIGN        __attribute__ ((aligned(4)))
 #endif
 
-#define CFG_TUH_HUB                 1
+// 2 hubs: many multi-port hubs (e.g. the PC Engine Mini 5-port hub) are two
+// cascaded hub chips internally, so a single such hub presents as 2 hub
+// devices. At 1, the second-tier chip never enumerates and every controller
+// behind it is dead — which is why hubs regressed vs the USBRetro era.
+#define CFG_TUH_HUB                 2
 #define CFG_TUH_CDC                 0
 #define CFG_TUH_HID                 8   // Max 8 HID interfaces total (2 per device typical)
 // Mass storage host: opt-in per target via CONFIG_USB_MSC. Default-off so
