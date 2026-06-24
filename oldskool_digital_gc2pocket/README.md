@@ -88,7 +88,7 @@ Round side (bottom)
 1. **Flash the RP2040-Zero** with the custom firmware (see *How to flash* below).
 2. **Cut the GC controller extension cable** for the female-socket side. If you're using heatshrink
    tubing, slide it on now, before splitting and soldering.
-3. **Identify and separate** the lines for **PIN 2 (DATA)**, **PINs 3+4 (GND)**, and **PIN 1 (Rumble+)**.
+3. **Identify and separate** the lines for **PIN 2 (DATA)**, **PINs 3+4 (GND)**, **PIN 6 (3.3V)**, and **PIN 1 (Rumble+)**.
    This controller has no rumble, but I haven't tested it without the Rumble+ line soldered, so wire it
    anyway.
 4. **Solder to the RP2040-Zero board:**
@@ -97,7 +97,7 @@ Round side (bottom)
    |---|---|
    | PIN 1 (Rumble+) | 5V |
    | PINs 3+4 (GND) | GND |
-   | PIN 6 (3.3 V) | 3V3 |
+   | PIN 6 (3.3V) | 3V3 |
    | PIN 2 (DATA) | GP2 |
 
 5. **Connect the controller** to the RP2040-Zero through the soldered-on socket, then plug the
